@@ -8,14 +8,13 @@ spec:
   source:
     repoURL: https://github.com/Binay-Basnet/Argo-cd-kubernates.git
     targetRevision: HEAD
-    # path: main
+    path: main
   destination:
     server: https://kubernetes.default.svc
     namespace: app
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
