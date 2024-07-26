@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: nginx
+      - name: frontend
         image: binaybasnet/rara:puller
         ports:
         - containerPort: 3000
